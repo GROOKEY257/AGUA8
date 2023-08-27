@@ -42,7 +42,7 @@
 		1C6053BF2A9850D900343BCF /* WaterData .xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "WaterData .xcdatamodel"; sourceTree = "<group>"; };
 		1C6053C02A98550C00343BCF /* WaterData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "WaterData 2.xcdatamodel"; sourceTree = "<group>"; };
 		1C6053C12A9A902400343BCF /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
-		1C6A94A42A9298B10012D943 /* HydrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C6A94A42A9298B10012D943 /* AQUA8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQUA8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6A94A72A9298B10012D943 /* HydrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationAppApp.swift; sourceTree = "<group>"; };
 		1C6A94A92A9298B10012D943 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1C6A94AE2A9298B30012D943 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		1C6A94A52A9298B10012D943 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C6A94A42A9298B10012D943 /* HydrationApp.app */,
+				1C6A94A42A9298B10012D943 /* AQUA8.app */,
 				1C6A94B42A9298B30012D943 /* HydrationAppTests.xctest */,
 				1C6A94BE2A9298B30012D943 /* HydrationAppUITests.xctest */,
 			);
@@ -163,7 +163,7 @@
 			);
 			name = HydrationApp;
 			productName = HydrationApp;
-			productReference = 1C6A94A42A9298B10012D943 /* HydrationApp.app */;
+			productReference = 1C6A94A42A9298B10012D943 /* AQUA8.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1C6A94B32A9298B30012D943 /* HydrationAppTests */ = {
@@ -453,7 +453,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rohan.HydrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AQUA8;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,7 +482,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rohan.HydrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AQUA8;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

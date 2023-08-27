@@ -41,21 +41,7 @@ struct ContentView: View {
 //        }
         ScrollView {
             VStack {
-                Button ("ADDDAWATERYAY:)") {
-                    let waterConsumed = WaterDrank(context: moc) // Instance ofe Core Data Entity
-                    waterConsumed.waterGlasses = Int16(cupsOfWater) // Adds data
-                    waterConsumed.reportDate = formatDateToString(randomDate(), graph: .fullDate)
-                    waterConsumed.totalGlasses = totalCups
-                    waterConsumed.totalDays = Int16(amountDays)
-                    try? moc.save() // Tries to save data
-                    totalCups += cupsOfWater
-                    if !usedDates.contains(waterConsumed.reportDate!) {
-                        usedDates.append(waterConsumed.reportDate!)
-                        amountDays += 1
-                    }
-                    averageCups = waterConsumed.totalGlasses / Double(waterConsumed.totalDays)
-                }
-                Text("Goal : " + String(goal))
+                Text("Goal : " + String(Int(goal)) + " Cups")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
@@ -94,6 +80,18 @@ struct ContentView: View {
                         else if cupsOfWater == 8 {
                             waterLevel = images[8]
                         }
+                        let waterConsumed = WaterDrank(context: moc) // Instance ofe Core Data Entity
+                        waterConsumed.waterGlasses = Int16(cupsOfWater) // Adds data
+                        waterConsumed.reportDate = formatDateToString(Date(), graph: .fullDate)
+                        waterConsumed.totalGlasses = totalCups
+                        waterConsumed.totalDays = Int16(amountDays)
+                        try? moc.save() // Tries to save data
+                        totalCups += cupsOfWater
+                        if !usedDates.contains(waterConsumed.reportDate!) {
+                            usedDates.append(waterConsumed.reportDate!)
+                            amountDays += 1
+                        }
+                        averageCups = waterConsumed.totalGlasses / Double(waterConsumed.totalDays)
                     } label: {
                         Circle()
                             .foregroundColor(.red)
@@ -101,12 +99,10 @@ struct ContentView: View {
                     }
                     Image(waterLevel)
                         .resizable()
-                        .frame(width: 200, height: 200)
+                        .frame(width: 250, height: 300)
                     Button {
-                        if cupsOfWater < goal {
-                            cupsOfWater += 1
-                            water = String(cupsOfWater)
-                        }
+                        cupsOfWater += 1
+                        water = String(cupsOfWater)
                         if cupsOfWater == 0 {
                             waterLevel = images[0]
                         }
@@ -134,6 +130,18 @@ struct ContentView: View {
                         else if cupsOfWater == 8 {
                             waterLevel = images[8]
                         }
+                        let waterConsumed = WaterDrank(context: moc) // Instance ofe Core Data Entity
+                        waterConsumed.waterGlasses = Int16(cupsOfWater) // Adds data
+                        waterConsumed.reportDate = formatDateToString(Date(), graph: .fullDate)
+                        waterConsumed.totalGlasses = totalCups
+                        waterConsumed.totalDays = Int16(amountDays)
+                        try? moc.save() // Tries to save data
+                        totalCups += cupsOfWater
+                        if !usedDates.contains(waterConsumed.reportDate!) {
+                            usedDates.append(waterConsumed.reportDate!)
+                            amountDays += 1
+                        }
+                        averageCups = waterConsumed.totalGlasses / Double(waterConsumed.totalDays)
                     } label: {
                         Circle()
                             .foregroundColor(.green)
@@ -147,6 +155,7 @@ struct ContentView: View {
                         BarMark(x: .value("Date", formatDateToString(formatStringToDate(from: water.reportDate ?? "", graph: .year) ?? Date(), graph: .year)), y: .value("WaterDrank", water.waterGlasses))
                     }
                 }
+                .frame(width: 300, height: 280)
             }
             else if graph == .month {
                 Chart {
@@ -154,6 +163,7 @@ struct ContentView: View {
                         BarMark(x: .value("Date", formatDateToString(formatStringToDate(from: water.reportDate ?? "", graph: .month) ?? Date(), graph: .month)), y: .value("WaterDrank", water.waterGlasses))
                     }
                 }
+                .frame(width: 300, height: 280)
             }
             else {
                 Chart {
@@ -161,19 +171,45 @@ struct ContentView: View {
                         BarMark(x: .value("Date", formatDateToString(formatStringToDate(from: water.reportDate ?? "", graph: .day) ?? Date(), graph: .day)), y: .value("WaterDrank", water.waterGlasses))
                     }
                 }
+                .frame(width: 300, height: 280)
             }
-            Text("Water so far : \(cupsOfWater)")
+            Text("Water Drank Today : \(Int(cupsOfWater))")
+                .foregroundColor(.blue)
             HStack {
                 Button("Day") {
                     graph = .day
                 }
+                .buttonStyle(.bordered)
+                .tint(.blue)
+                .buttonStyle(.borderedProminent)
                 Button("Month") {
                     graph = .month
                 }
+                .buttonStyle(.bordered)
+                .tint(.blue)
+                .buttonStyle(.borderedProminent)
                 Button("Year") {
                     graph = .year
                 }
+                .buttonStyle(.bordered)
+                .tint(.blue)
+                .buttonStyle(.borderedProminent)
             }
+            Button ("ADDDAWATERYAY:)") {
+                let waterConsumed = WaterDrank(context: moc) // Instance ofe Core Data Entity
+                waterConsumed.waterGlasses = Int16(cupsOfWater) // Adds data
+                waterConsumed.reportDate = formatDateToString(randomDate(), graph: .fullDate)
+                waterConsumed.totalGlasses = totalCups
+                waterConsumed.totalDays = Int16(amountDays)
+                try? moc.save() // Tries to save data
+                totalCups += cupsOfWater
+                if !usedDates.contains(waterConsumed.reportDate!) {
+                    usedDates.append(waterConsumed.reportDate!)
+                    amountDays += 1
+                }
+                averageCups = waterConsumed.totalGlasses / Double(waterConsumed.totalDays)
+            }
+            .font(Font.system(size: 24))
         }
         .navigationBarBackButtonHidden(true)
         .padding()
@@ -189,7 +225,7 @@ struct ContentView: View {
     func formatDateToString(_ date: Date, graph: graphType) -> String {
         let dateFormatter = DateFormatter()
         if graph == .year {
-            dateFormatter.dateFormat = "MM" // month name
+            dateFormatter.dateFormat = "MMMM" // month name
         }
         else if graph == .month {
             dateFormatter.dateFormat = "dd" // day in number
