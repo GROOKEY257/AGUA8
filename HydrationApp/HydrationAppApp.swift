@@ -12,7 +12,7 @@ struct HydrationAppApp: App {
     @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TitleScreen()
                 .environment(\.managedObjectContext, dataController.container.viewContext) // Creates one Core Data store for all views to use
         }
     }

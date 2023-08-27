@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C11B4322A96E1AE004C906A /* WaterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C11B4302A96E1AD004C906A /* WaterData.xcdatamodeld */; };
 		1C11B43B2A96E275004C906A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C11B43A2A96E275004C906A /* DataController.swift */; };
+		1C6053C22A9A902400343BCF /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6053C12A9A902400343BCF /* TitleScreen.swift */; };
 		1C6A94A82A9298B10012D943 /* HydrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A94A72A9298B10012D943 /* HydrationAppApp.swift */; };
 		1C6A94AA2A9298B10012D943 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A94A92A9298B10012D943 /* ContentView.swift */; };
 		1C6A94AF2A9298B30012D943 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A94AE2A9298B30012D943 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		1C11B43A2A96E275004C906A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1C6053BF2A9850D900343BCF /* WaterData .xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "WaterData .xcdatamodel"; sourceTree = "<group>"; };
 		1C6053C02A98550C00343BCF /* WaterData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "WaterData 2.xcdatamodel"; sourceTree = "<group>"; };
+		1C6053C12A9A902400343BCF /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		1C6A94A42A9298B10012D943 /* HydrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6A94A72A9298B10012D943 /* HydrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationAppApp.swift; sourceTree = "<group>"; };
 		1C6A94A92A9298B10012D943 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				1C11B4302A96E1AD004C906A /* WaterData.xcdatamodeld */,
 				1C11B43A2A96E275004C906A /* DataController.swift */,
 				1C6A94A92A9298B10012D943 /* ContentView.swift */,
+				1C6053C12A9A902400343BCF /* TitleScreen.swift */,
 				1C6A94D32A92B03C0012D943 /* Assets.xcassets */,
 				1C6A94AD2A9298B30012D943 /* Preview Content */,
 			);
@@ -275,6 +278,7 @@
 			files = (
 				1C11B4322A96E1AE004C906A /* WaterData.xcdatamodeld in Sources */,
 				1C11B43B2A96E275004C906A /* DataController.swift in Sources */,
+				1C6053C22A9A902400343BCF /* TitleScreen.swift in Sources */,
 				1C6A94AA2A9298B10012D943 /* ContentView.swift in Sources */,
 				1C6A94A82A9298B10012D943 /* HydrationAppApp.swift in Sources */,
 			);
